@@ -1,4 +1,4 @@
- # SSH-BOT
+# SSH-BOT
 
    SSH-BOT is an application intended to be used as a manager for
 Secure Shell connections. It has been built to help system administrators while
