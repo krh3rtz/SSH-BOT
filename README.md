@@ -33,75 +33,75 @@ NOTE: The seclusion is accomplished by the '|' (pipe) symbol with no spaces in b
 
 	sudo ./ssh_botnet.py -F credentials_file.txt
 
- [*] OPTIONS [*]
+ [+] OPTIONS [+]
 
 The menu has 7 options:
 
 1) Single or multi bot interaction:
 
-This is the first type of connection above specified. If you type 'exit' or 'back',
-the sessions will not be closed but you will rather be forwarded to main menu. Every
-command send though this interface, will show the output of every host provided.
+		This is the first type of connection above specified. If you type 'exit' or 'back',
+		the sessions will not be closed but you will rather be forwarded to main menu. Every
+		command send though this interface, will show the output of every host provided.
 
-If you want to interact with one host, simply provide the ID. Otherwise, if the interaction
-is with several hosts, you would provide a list of IDs separated by a comma:
+		If you want to interact with one host, simply provide the ID. Otherwise, if the interaction
+		is with several hosts, you would provide a list of IDs separated by a comma:
 
-eg. 0,1,2,3
+		eg. 0,1,2,3
 
-NOTE: To choose all bots at the same time, type the handicap 'all'.
+		NOTE: To choose all bots at the same time, type the handicap 'all'.
 
 2) Disconnect bot:
 
-This options recieves the ID corresponding to the bot you wish to disconnect.
-There will be register of this in the log file.
+		This options recieves the ID corresponding to the bot you wish to disconnect.
+		There will be register of this in the log file.
 
 3) Add single bot:
 	
-With a host (in dotted decimal notation), user and password, you can add a new host (bot) 
-to the list. This connection will be saved in the log file.
+		With a host (in dotted decimal notation), user and password, you can add a new host (bot) 
+		to the list. This connection will be saved in the log file.
 
-eg. 192.168.1.50,ssh_user,passwd
+		eg. 192.168.1.50,ssh_user,passwd
 
-NOTE: separate them with a comma. There will be register of this in the log file.
+		NOTE: separate them with a comma. There will be register of this in the log file.
 
  4) Win server connection:
 
-A pure SSH connection is established. In contrast with the last option, you just need 
-to provide host (in dotted decimal notation) and user. Once in the newly open
-terminal, you enter the password. A peculiar thing is that you need to provide a OS 
-version	(Win os version). If provided, an algorithm will detect the version of the 
-remote os. This information will be logged.
+		A pure SSH connection is established. In contrast with the last option, you just need 
+		to provide host (in dotted decimal notation) and user. Once in the newly open
+		terminal, you enter the password. A peculiar thing is that you need to provide a OS 
+		version	(Win os version). If provided, an algorithm will detect the version of the 
+		remote os. This information will be logged.
 
-eg. 127.0.0.1,ssh_user
-Password: XXXXX
+		eg. 127.0.0.1,ssh_user
+		Password: XXXXX
 
-For the version:
+		For the version:
 
-eg.
-[*] Give me the version: 1.2.345
+		eg.
+		[*] Give me the version: 1.2.345
 
 5) Specific actions -> used for actions that need su/sudo:
 	
-This is similar to the last option, the difference is that ID(s) need to be provided.
-This means that a pure SSH will be established using the credentials of the already 
-connected hosts. This interaction is done when su/sudo commands are to be used.
-Connections will also be logged.
+		This is similar to the last option, the difference is that ID(s) need to be provided.
+		This means that a pure SSH will be established using the credentials of the already 
+		connected hosts. This interaction is done when su/sudo commands are to be used.
+		Connections will also be logged.
 
-eg. 0,1,2,3
+		eg. 0,1,2,3
 
-For all bots:
+		For all bots:
 
-eg. all
+		eg. all
 	
 6) Refresh botlist:
 
-Refreshes the hosts list. The main task is to show the administrator host, including
-the automatic detection of the remote OS and some kernel information. This part of the
-interface, has all the IDs used to interact with all hosts.
+		Refreshes the hosts list. The main task is to show the administrator host, including
+		the automatic detection of the remote OS and some kernel information. This part of the
+		interface, has all the IDs used to interact with all hosts.
 
 7) Check log file:
 
-A quick view to the current logfile.
+		A quick view to the current logfile.
 
 
 NOTE:  In order to exit the application, typing 'exit' will help.
