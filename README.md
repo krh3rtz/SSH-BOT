@@ -1,11 +1,10 @@
- -------
-# SSH-BOT
- -------
-SSH-BOT is an application intended to be used as a manager for
+ # SSH-BOT
+
+   SSH-BOT is an application intended to be used as a manager for
 Secure Shell connections. It has been built to help system administrators while
 managing several servers at the same time.
 
-This tool handles connections in three different ways. The first one is 
+   This tool handles connections in three different ways. The first one is 
 accomplished by using custom threaded SSH connections. This type of shells are for mere
 visualization purposes (verify port status, check non privileged required files). The second
 one is by pure SSH system shells. The main function of these connections, is to 
@@ -14,7 +13,7 @@ tasks in each one of the systems, etc). The last type, is similar to the second 
 main difference is that all connections made with this third option need to be created
 at the moment.
 
-The way sessions are created (regarding the first way to connect hosts) is by using a credentials 
+   The way sessions are created (regarding the first way to connect hosts) is by using a credentials 
 file (-F credentials_file). SSH-BOT will read the credentials from this file and will atempt to establish 
 a custom threaded SSH connection with the remote servers. If everything goes well, this status will be added to the
 log file as well as if anything goes wrong, providing the host (in dotted decimal notation)
@@ -29,11 +28,15 @@ NOTE: The seclusion is accomplished by the '|' (pipe) symbol with no spaces in b
 	PASS-CRYPT to crypt your credentials before and after using SSH-BOT.
 
 
+
+
 [+] To start the application:
 
 	sudo ./ssh_botnet.py -F credentials_file.txt
 
- [+] OPTIONS [+]
+
+
+[+] OPTIONS [+]
 
 The menu has 7 options:
 
@@ -107,7 +110,9 @@ The menu has 7 options:
 NOTE:  In order to exit the application, typing 'exit' will help.
 
 
+
 [+] MORE INFORMATION [+]
+
 
 [+] All the log files are saved after exiting SSH-BOT. They are held under 'os_admin/' folder.
     There are two types of log files: log and sys_list. The first one keeps all the information
@@ -137,7 +142,7 @@ NOTE:  In order to exit the application, typing 'exit' will help.
 	pip3 install argparse 
 
 
-	Created by: 
+Created by: 
 
 		==================================================================
 		| ##   ## ######## ##   ##   ###### ########  ######## ########   |
