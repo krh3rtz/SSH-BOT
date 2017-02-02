@@ -1,5 +1,5 @@
-/*
-  log.py
+'''
+  SSH-BOT
   
  * Copyright (C) 2017 Krhertz
  *
@@ -15,9 +15,9 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-#logging class
+ 
+ LOGGING Class
+'''
 
 import os
 import time
