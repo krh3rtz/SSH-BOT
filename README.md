@@ -1,6 +1,6 @@
- ----------------
-  [*] SSH-BOT [*]
- ----------------
+ -------
+# SSH-BOT
+ -------
 SSH-BOT is an application intended to be used as a manager for
 Secure Shell connections. It has been built to help system administrators while
 managing several servers at the same time.
@@ -34,11 +34,11 @@ NOTE: The seclusion is accomplished by the '|' (pipe) symbol with no spaces in b
 	sudo ./ssh_botnet.py -F credentials_file.txt
 
 
-[*] OPTIONS [*]
+# [*] OPTIONS [*]
 
 	The menu has 7 options:
 
- 1) Single or multi bot interaction:
+ # 1) Single or multi bot interaction:
 
 	This is the first type of connection above specified. If you type 'exit' or 'back',
 	the sessions will not be closed but you will rather be forwarded to main menu. Every
@@ -51,12 +51,12 @@ NOTE: The seclusion is accomplished by the '|' (pipe) symbol with no spaces in b
 
 	NOTE: To choose all bots at the same time, type the handicap 'all'.
 
- 2) Disconnect bot:
+ # 2) Disconnect bot:
 
 	This options recieves the ID corresponding to the bot you wish to disconnect.
 	There will be register of this in the log file.
 
- 3) Add single bot:
+ # 3) Add single bot:
 	
 	With a host (in dotted decimal notation), user and password, you can add a new host (bot) 
 	to the list. This connection will be saved in the log file.
@@ -65,7 +65,7 @@ NOTE: The seclusion is accomplished by the '|' (pipe) symbol with no spaces in b
 	
 	NOTE: separate them with a comma. There will be register of this in the log file.
 
- 4) Win server connection:
+ # 4) Win server connection:
 
 	A pure SSH connection is established. In contrast with the last option, you just need 
 	to provide host (in dotted decimal notation) and user. Once in the newly open
@@ -77,11 +77,11 @@ NOTE: The seclusion is accomplished by the '|' (pipe) symbol with no spaces in b
 	Password: XXXXX
 
 	For the version:
-	
+
 	eg.
 	[*] Give me the version: 1.2.345
 
- 5) Specific actions -> used for actions that need su/sudo:
+# 5) Specific actions -> used for actions that need su/sudo:
 	
 	This is similar to the last option, the difference is that ID(s) need to be provided.
 	This means that a pure SSH will be established using the credentials of the already 
@@ -89,18 +89,18 @@ NOTE: The seclusion is accomplished by the '|' (pipe) symbol with no spaces in b
 	Connections will also be logged.
 
 	eg. 0,1,2,3
-	
+
 	For all bots:
-	
+
 	eg. all
 	
- 6) Refresh botlist:
+# 6) Refresh botlist:
 
 	Refreshes the hosts list. The main task is to show the administrator host, including
 	the automatic detection of the remote OS and some kernel information. This part of the
 	interface, has all the IDs used to interact with all hosts.
 
- 7) Check log file:
+# 7) Check log file:
 	
 	A quick view to the current logfile.
 
@@ -108,7 +108,7 @@ NOTE: The seclusion is accomplished by the '|' (pipe) symbol with no spaces in b
  NOTE:  In order to exit the application, typing 'exit' will help.
 
 
-MORE INFORMATION:
+# MORE INFORMATION:
 
 [+] All the log files are saved after exiting SSH-BOT. They are held under 'os_admin/' folder.
     There are two types of log files: log and sys_list. The first one keeps all the information
@@ -140,15 +140,15 @@ MORE INFORMATION:
 
 	Created by: 
 
-	==================================================================
-	| ##   ## ######## ##   ##   ###### ########  ######## ########   |
-	| ##  ##  ##    ## ##   ##       #  ##    ##     ##          #    |
-	| ## ##   ##    ## ##   ##      ##  ##    ##     ##         #     |
-	| ## ##   ######   #######        # ######       ##       #       |
-	| ##  ##  ##   ##  ##   ##        # ##   ##      ##     #         |
-	| ##   ## ##    ## ##   ##   #####  ##    ##     ##    ########   |
-	|                                                                 |
-	|     Exploiting vulnerabilities, creating new ways through...    |
-	==================================================================	
+==================================================================
+| ##   ## ######## ##   ##   ###### ########  ######## ########   |
+| ##  ##  ##    ## ##   ##       #  ##    ##     ##          #    |
+| ## ##   ##    ## ##   ##      ##  ##    ##     ##         #     |
+| ## ##   ######   #######        # ######       ##       #       |
+| ##  ##  ##   ##  ##   ##        # ##   ##      ##     #         |
+| ##   ## ##    ## ##   ##   #####  ##    ##     ##    ########   |
+|                                                                 |
+|     Exploiting vulnerabilities, creating new ways through...    |
+==================================================================	
 	
-	Happy hacking.
+Happy hacking.
