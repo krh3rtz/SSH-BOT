@@ -20,7 +20,6 @@
   
 '''
 
-
 from pexpect import pxssh
 from core.log import *
 import time
@@ -43,13 +42,11 @@ class Client ():
 		try:
 			s = pxssh.pxssh()
 			s.login (self.target, self.sshuser, self.passwd)
-			dt = time.ctime()
-			self.log_con.log_append ('[*] Successful Connection with: '+self.target+' on '+ dt)
 			return s
 		except Exception as e:
 
 			dt = time.ctime()
-			self.log_con.log_append ('[*] Date and time of alert: ' + dt)
+			self.log_con.log_append ('\n[!] CONNECTION ALERT: Date and time -> ' + dt)
 			error =  ('[!] Host: '+ self.target +'\n-> Credentials: '+ self.sshuser +':'+self.passwd +'\n-> Specs of error: \n\t'+ str(e) +'\n')
 			self.log_con.log_append (error)
 			return False
