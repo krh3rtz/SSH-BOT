@@ -21,11 +21,16 @@ and the credentials used while atempting log-in.
 
 The structure of this file is:
 
-	eg.  127.0.0.1|ssh_user|pass
+	eg.  
+	   127.0.0.1|ssh_user|pass
+	   127.0.0.1|ssh_user|pass
+	   127.0.0.1|ssh_user|pass
 
 NOTE: The seclusion is accomplished by the '|' (pipe) symbol with no spaces in between each parameter. 
-	It is recomended to use vi to edit this file. Optionally, you can use the last version of 
-	PASS-CRYPT to crypt your credentials before and after using SSH-BOT.
+	It is recomended to use vi to edit this file. Do not leave spaces. Optionally, you can use the 
+	last version of PASS-CRYPT to crypt your credentials before and after using SSH-BOT.
+	
+		PASS-CRYPT-v0.1 -> https://github.com/krhertz/PASS-CRYPT-v0.1
 
 
 
@@ -117,7 +122,7 @@ NOTE:  In order to exit the application, typing 'exit' will help.
 [+] All the log files are saved after exiting SSH-BOT. They are held under 'os_admin/' folder.
     There are two types of log files: log and sys_list. The first one keeps all the information
     regarding connections. The second one contains the last hosts list before exiting SSH-BOT. 
-    Although they are different, they are tagged with date and time of disconnection from the platform.
+    Although they are different, they are tagged with date and time of disconnection from the tool.
 
 	eg.  logs_01-02-2017_06:26:56  sys_list_01-02-2017_02:16:31
 
@@ -126,20 +131,24 @@ NOTE:  In order to exit the application, typing 'exit' will help.
 	 there is a bash script that will simply ask you for a filter and will automatically give you
 	 all logs with that filter. This simplifies the way to visualize log files. This script is under
 	 'filtered/'.
+	 
+	 	sudo ./filtered/filter.sh 
 
 [+] To avoid problems with this application, make sure you are on a linux machine and that
     you have installed sshpass. In Debian like systems simply:
-
-	apt-get install sshpass
-
-    This has been developed on Python 3.4. For this reason you need to have installed the library pexpect.
-    A simple way to install it is by using 'pip3'. Simply:
 	
-	pip3 install pexpect
+		apt-get install sshpass
 
-   The parsing of options is done by using argparse. You also need it installed:
+[+] This has been developed on Python 3.4. For this reason you need to have installed the library pexpect.
+A simple way to install it is by using 'pip3'. Simply:
+		
+		pip3 install pexpect
 
-	pip3 install argparse 
+[+] The parsing of options is done by using argparse. You also need it installed:
+
+		pip3 install argparse 
+
+NOTE: You need an SSH client installed as well.
 
 
 Created by: 
