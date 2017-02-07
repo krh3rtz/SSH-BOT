@@ -27,10 +27,11 @@ The structure of this file is:
 	   127.0.0.1|ssh_user|pass
 
 NOTE: The seclusion is accomplished by the '|' (pipe) symbol with no spaces in between each parameter. 
-	It is recomended to use vi to edit this file. Do not leave spaces. Optionally, you can use the 
-	last version of PASS-CRYPT to crypt your credentials before and after using SSH-BOT.
+	It is recomended to use vi to edit this file. Do not leave spaces. This is for LINUX based servers
+	Optionally, you can use the last version of PASS-CRYPT to crypt your credentials before and after 
+	using SSH-BOT.
 	
-		PASS-CRYPT-v0.1 -> https://github.com/krhertz/PASS-CRYPT-v0.1
+PASS-CRYPT-v0.1 -> https://github.com/krhertz/PASS-CRYPT-v0.1
 
 
 
